@@ -14,10 +14,17 @@
       }
 
       button {
+        background-color: pink;
         padding: 10px 20px;
-        font-size: 18px;
+        font-size: 20px;
         margin: 10px;
+        border-radius: 10px;
         cursor: pointer;
+        transition: 1s;
+      }
+
+      button:hover {
+        background-color: palevioletred;
       }
     </style>
   </head>
@@ -29,6 +36,7 @@
 
     <script>
       const btnNo = document.getElementById("no");
+      const question = document.getElementById("question");
       let lastIndex = -1;
 
       btnNo.addEventListener("click", function () {
@@ -68,7 +76,7 @@
 
         lastIndex = randomIndex;
 
-        document.getElementById("question").innerText = messages[randomIndex];
+        question.innerText = messages[randomIndex];
       }
     </script>
   </body>
