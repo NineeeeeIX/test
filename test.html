@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+
+        #noBtn {
+            position: absolute;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you choose Yes?</h1>
+
+    <button onclick="sayYes()">Yes</button>
+    <button id="noBtn" onmouseover="moveButton()">No</button>
+
+    <script>
+        function sayYes() {
+            alert("Good choice 😆");
+        }
+
+        function moveButton() {
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+
+            let button = document.getElementById("noBtn");
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
