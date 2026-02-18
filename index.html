@@ -49,8 +49,11 @@
       }
 
       function moveButton() {
-        let x = Math.random() * window.innerWidth;
-        let y = Math.random() * window.innerHeight;
+        const btnWidth = btnNo.offsetWidth;
+        const btnHeight = btnNo.offsetHeight;
+
+        let x = Math.random() * (window.innerWidth - btnWidth);
+        let y = Math.random() * (window.innerHeight - btnHeight);
 
         btnNo.style.left = x + "px";
         btnNo.style.top = y + "px";
